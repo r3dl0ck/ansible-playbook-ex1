@@ -1,0 +1,6 @@
+[web]
+node1 ansible_host=localhost ansible_user=nickfury
+node2 ansible_host=localhost ansible_user=nickfury
+
+[database]
+node3 ansible_host=127.0.0.1 ansible_user=nickfury

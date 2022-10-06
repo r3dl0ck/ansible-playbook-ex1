@@ -1,0 +1,20 @@
+---
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+      - ./hosts
+  # enabled: false
+  execution-environment:
+    container-engine: podman
+    container-options:
+    - --net=host
+    enabled: true
+    image: quay.io/ansible/ansible-navigator-demo-ee:0.6.0
+    pull:
+      policy: missing
+  logging:
+    level: debug
+  mode: stdout
+  playbook-artifact:
+    save-as: /tmp/{playbook_name}-artifact-{time_stamp}.json
